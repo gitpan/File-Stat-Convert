@@ -18,10 +18,11 @@ File::Stat::Convert - functions to conversion file stat mode.
 =head1 DESCRIPTION
 
 This module provides a few functions for conversion between
-binary and literal representations of file mode bits.
+binary and literal representations of file mode bits,
+including file type.
 
 All of them use only Constants Functions (inline subroutes) and
-functions from I<File::Stat::Bits>.
+functions from B<File::Stat::Bits>.
 
 
 =head1 FUNCTIONS
@@ -38,7 +39,7 @@ BEGIN
     use Exporter;
     use vars qw($VERSION @ISA @EXPORT);
 
-    $VERSION = do { my @r = (q$Revision: 0.13 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+    $VERSION = do { my @r = (q$Revision: 0.14 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
     @ISA = ('Exporter');
 
@@ -284,6 +285,8 @@ sub string_to_mode
 L<stat(2)>;
 
 L<File::Stat::Bits(3)>;
+
+L<Stat::lsMode(3)>;
 
 =head1 AUTHOR
 

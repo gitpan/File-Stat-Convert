@@ -13,10 +13,11 @@ SYNOPSIS
 
 DESCRIPTION
     This module provides a few functions for conversion between
-    binary and literal representations of file mode bits.
+    binary and literal representations of file mode bits, including
+    file type.
 
     All of them use only Constants Functions (inline subroutes) and
-    functions from *File::Stat::Bits*.
+    functions from File::Stat::Bits.
 
 FUNCTIONS
   
@@ -46,6 +47,8 @@ SEE ALSO
     the stat(2) manpage;
 
     the File::Stat::Bits(3) manpage;
+
+    the Stat::lsMode(3) manpage;
 
 AUTHOR
     Dmitry Fedorov <fedorov@inp.nsk.su>
